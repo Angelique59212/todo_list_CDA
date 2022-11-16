@@ -1,14 +1,19 @@
 let containerList = document.getElementById('container-List');
 
-export let Content = function () {
-    this.display = () => {
-        let button = document.querySelector('#styleButtonSearch');
+export let Content = function (inputValue) {
+    this.inputValue = inputValue;
 
-        button.addEventListener('click', ()=> {
-            let para = document.createElement('p');
-            para.setAttribute('class', 'paragraph');
-            para.innerHTML = document.querySelector('#styleSearch').value;
-            containerList.appendChild(para);
+    this.display = () => {
+        let paragraph = document.createElement('p');
+        paragraph.id = "paragraph";
+        paragraph.innerHTML = this.inputValue;
+        containerList.appendChild(paragraph);
+
+        let removeList = document.createElement('span');
+        removeList.innerHTML = "Supprimer";
+        removeList.addEventListener('click', ()=> {
+            paragraph.remove();
         })
+        paragraph.appendChild(removeList);
     }
 }

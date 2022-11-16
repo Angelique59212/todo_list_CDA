@@ -42,7 +42,7 @@ h1 {
 
 /* text */
 
-.paragraph {
+#paragraph {
     margin:3rem;
     font-size: 2rem;
 }
