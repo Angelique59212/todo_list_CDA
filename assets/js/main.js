@@ -4,17 +4,15 @@ let container = document.getElementById('container');
 let search = document.getElementById('search');
 let containerList = document.getElementById('container-List');
 
-let SearchBar = function (width, height, margin) {
+let SearchBar = function (width, height) {
     this.width = width;
     this.height = height;
-    this.margin = margin;
 
     this.display = () => {
         let inputSearch = document.createElement('input');
         inputSearch.setAttribute('id', 'styleSearch')
         inputSearch.style.width = this.width;
         inputSearch.style.height = this.height;
-        inputSearch.style.margin = this.margin;
         search.appendChild(inputSearch);
 
         let button = document.createElement('button');
@@ -24,5 +22,5 @@ let SearchBar = function (width, height, margin) {
     }
 }
 
-let BarSearch = new SearchBar("25vw","4vh","2rem");
+let BarSearch = new SearchBar("40vw","4vh");
 BarSearch.display();
