@@ -10,10 +10,26 @@ export let Content = function (inputValue) {
         containerList.appendChild(paragraph);
 
         let removeList = document.createElement('span');
+        removeList.id = "styleButtonRemove"
         removeList.innerHTML = "Supprimer";
         removeList.addEventListener('click', ()=> {
             paragraph.remove();
-        })
+        });
         paragraph.appendChild(removeList);
+
+        let validateList = document.createElement('span');
+        validateList.id = 'styleValidate';
+        validateList.innerHTML = "Valider";
+        validateList.addEventListener('click', ()=> {
+            paragraph.style.textDecoration = "line-through";
+        });
+        paragraph.appendChild(validateList);
+
+        let editList = document.createElement('span');
+        editList.id = 'styleEdit';
+        editList.innerHTML = 'Editer';
+        editList.addEventListener('click', ()=> {
+
+        })
     }
 }

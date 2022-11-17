@@ -33,6 +33,11 @@ h1 {
     color: #95d6b7;
     font-size: 1.4rem;
     border: 1px solid #95d6b7;
+
+}
+
+#styleSearch , #styleButtonSearch {
+    border-radius: 0.2rem;
 }
 
 #search {
@@ -45,6 +50,24 @@ h1 {
 #paragraph {
     margin:3rem;
     font-size: 2rem;
+}
+
+/* button */
+
+#styleButtonRemove {
+    float: right;
+    border: 1px solid #dc5350;
+    background: #dc5350;
+    border-radius: 0.2rem;
+    font-size: 1.4rem;
+}
+
+#styleValidate {
+    border: 1px solid #95d6b7;
+    background: #95d6b7;
+    border-radius: 0.2rem;
+    font-size: 1.4rem;
+    float: right;
 }
 
 
