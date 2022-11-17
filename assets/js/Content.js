@@ -30,11 +30,11 @@ export let Content = function (inputValue) {
         editList.innerHTML = '📃';
         editList.addEventListener('click', ()=> {
             paragraph.contentEditable = 'true';
-            editList.style.border = "1px solid brown"
+            paragraph.style.border = "1px solid brown"
             setTimeout(() => {
                 paragraph.contentEditable = 'false';
-                editList.style.border = "none";
-            },5000)
+                paragraph.style.border = "none";
+            },3000)
         });
         paragraph.appendChild(editList);
     }
