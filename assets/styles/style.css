@@ -27,7 +27,7 @@ h1 {
 
 /* Search */
 
-#styleButtonSearch, #clear {
+#styleButtonSearch, #clearButton {
     width: 7vw;
     height: 4vh;
     color: #95d6b7;
@@ -47,7 +47,7 @@ h1 {
 
 /* text */
 
-#paragraph {
+.paragraph {
     margin:3rem;
     font-size: 2rem;
 }
@@ -75,6 +75,11 @@ h1 {
     float: right;
     padding: 0.2rem;
     margin: 0.2rem;
+}
+
+#clearButton {
+    margin: 3rem auto;
+
 }
 
 

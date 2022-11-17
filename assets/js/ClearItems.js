@@ -1,14 +1,17 @@
-import {containerList} from "./Content";
+let container = document.getElementById('container');
 
-export let ClearItem = ()=> {
-    function clear () {
-        let container = document.getElementById('container');
-        let clearItem = document.createElement('button');
-        clearItem.id = 'clear';
-        clearItem.innerHTML = 'Clear Items';
-        clearItem.addEventListener('click', ()=> {
-            containerList.remove();
-        });
-        container.appendChild(clearItem);
+export function ClearItem () {
+    this.clear = function () {
+        let buttonClear = document.createElement('button');
+        buttonClear.id = 'clearButton'
+        buttonClear.innerHTML = 'Clear Items';
+        buttonClear.addEventListener('click', () => {
+            let p = document.querySelectorAll('.paragraph');
+            p.forEach((element)=> {
+                element.remove();
+            })
+
+        })
+        container.appendChild(buttonClear);
     }
 }

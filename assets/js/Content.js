@@ -5,7 +5,7 @@ export let Content = function (inputValue) {
 
     this.display = () => {
         let paragraph = document.createElement('p');
-        paragraph.id = "paragraph";
+        paragraph.className = "paragraph";
         paragraph.innerHTML = this.inputValue;
         containerList.appendChild(paragraph);
 
