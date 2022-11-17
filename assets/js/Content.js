@@ -29,7 +29,16 @@ export let Content = function (inputValue) {
         editList.id = 'styleEdit';
         editList.innerHTML = 'Editer';
         editList.addEventListener('click', ()=> {
+            paragraph.replace(0);
+        });
+        paragraph.appendChild(editList);
 
-        })
+        let clearItem = document.createElement('button');
+        clearItem.id = 'clear';
+        clearItem.innerHTML = 'Clear Items';
+        clearItem.addEventListener('click', ()=> {
+            containerList.remove();
+        });
+        paragraph.appendChild(clearItem);
     }
 }

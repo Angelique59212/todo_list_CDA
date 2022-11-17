@@ -27,7 +27,7 @@ h1 {
 
 /* Search */
 
-#styleButtonSearch {
+#styleButtonSearch, #clear {
     width: 7vw;
     height: 4vh;
     color: #95d6b7;
@@ -36,7 +36,7 @@ h1 {
 
 }
 
-#styleSearch , #styleButtonSearch {
+#styleSearch , #styleButtonSearch , #clear{
     border-radius: 0.2rem;
 }
 
@@ -55,20 +55,26 @@ h1 {
 /* button */
 
 #styleButtonRemove {
-    float: right;
     border: 1px solid #dc5350;
     background: #dc5350;
-    border-radius: 0.2rem;
-    font-size: 1.4rem;
 }
 
 #styleValidate {
     border: 1px solid #95d6b7;
     background: #95d6b7;
+}
+
+#styleEdit {
+    border: 1px solid #45bfe7;
+    background: #45bfe7;
+}
+
+#styleButtonRemove , #styleValidate , #styleEdit {
     border-radius: 0.2rem;
     font-size: 1.4rem;
     float: right;
 }
+
 
 
 
