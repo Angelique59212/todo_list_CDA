@@ -1,4 +1,4 @@
-let containerList = document.getElementById('container-List');
+export let containerList = document.getElementById('container-List');
 
 export let Content = function (inputValue) {
     this.inputValue = inputValue;
@@ -11,7 +11,7 @@ export let Content = function (inputValue) {
 
         let removeList = document.createElement('span');
         removeList.id = "styleButtonRemove"
-        removeList.innerHTML = "Supprimer";
+        removeList.innerHTML = "❌";
         removeList.addEventListener('click', ()=> {
             paragraph.remove();
         });
@@ -19,7 +19,7 @@ export let Content = function (inputValue) {
 
         let validateList = document.createElement('span');
         validateList.id = 'styleValidate';
-        validateList.innerHTML = "Valider";
+        validateList.innerHTML = "✅";
         validateList.addEventListener('click', ()=> {
             paragraph.style.textDecoration = "line-through";
         });
@@ -27,18 +27,15 @@ export let Content = function (inputValue) {
 
         let editList = document.createElement('span');
         editList.id = 'styleEdit';
-        editList.innerHTML = 'Editer';
+        editList.innerHTML = '📃';
         editList.addEventListener('click', ()=> {
-            paragraph.replace(0);
+            paragraph.contentEditable = 'true';
+            editList.style.border = "1px solid brown"
+            setTimeout(() => {
+                paragraph.contentEditable = 'false';
+                editList.style.border = "none";
+            },5000)
         });
         paragraph.appendChild(editList);
-
-        let clearItem = document.createElement('button');
-        clearItem.id = 'clear';
-        clearItem.innerHTML = 'Clear Items';
-        clearItem.addEventListener('click', ()=> {
-            containerList.remove();
-        });
-        paragraph.appendChild(clearItem);
     }
 }
